@@ -1,0 +1,9 @@
+.w_mainbox .w_mainbox_columnleft {
+    flex: 2;
+}
+
+.w_mainbox .w_mainbox_columnright {
+    flex: 1;
+    margin: 0 .125rem;
+}
+

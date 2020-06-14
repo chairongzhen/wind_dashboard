@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+           .cleanfloat::after{display: block; clear: both; content:""; visibility: hidden; height: 0;}/*清浮动*/
+           ul { display: flex }
+           ul li{list-style:none; font-size:14px;  color:#ccc; cursor:pointer; color: rgb(215, 215, 0)}/*五角星样式*/
+           .hs,.cs{color:#f00;}/*五角星点击后样式*/
+        </style>
+    </head>
+    <body>
+        <ul class="cleanfloat">
+            <li>&#9733;</li>
+            <li>&#9733;</li>
+            <li>&#9733;</li>
+            <li>&#9733;</li>
+            <li>&#9733;</li>
+        </ul>
+        <script src="js/jquery.js"></script>
+        <script>
+        $(function(){
+            $("ul li").hover(function(){
+                $(this).addClass('hs');
+                $(this).prevAll().addClass('hs')
+            },function(){
+                $(this).removeClass('hs');
+                $(this).prevAll().removeClass('hs')
+            })
+
+            $("ul li").click(function(){
+                $(this).addClass('cs');
+                $(this).prevAll().addClass('cs');
+                $(this).nextAll().removeClass('cs')
+            })
+        })
+        </script>
+    </body>
+</html>

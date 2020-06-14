@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" conetnt="width=device-width, initial-scale=1.0" />
+        <title>Wind Dashboard</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Wind Dashboard</h1>
+            <div class="w_menu">
+                <ul>
+                    <li><a onclick="gotoPage('s1.html')">上市公司总市值</a></li>
+                    <li><a onclick="gotoPage('s2.html')">浦东上市公司分布</a></li>
+                    <li><a onclick="gotoPage('s3.html')">发债企业</a></li>
+                    <li><a onclick="gotoPage('s4.html')">企业舆情</a></li>
+                </ul>
+          </div>
+          <div class="w_showTime"></div>
+        </header>
+        <div class="w_parent_mainbox">
+            <iframe name="w_frame" id="w_frame" src="s3.html" frameborder="0" width="100%" ></iframe>
+        </div>
+        <script src="js/big.js"></script>
+        <script src="js/w_getdate.js"></script>
+        <script src="js/flexible.js"></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/echarts.min.js"></script>
+    </body>
+</html>
